@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=	, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+	
+	<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>	
+</head>
+<body>
+	
+<ul>
+  <li><a href="tournaments.html" style="background-color:#525252"><b>Tournaments</b></a></li>
+	<li><a href="future.html"><b>Future</b></a></li>
+	<li><a href="index.html"><b>Rankings</b></a></li>
+</ul>
+	
+    <div class="leaderboard">
+        <img src="images/Screenshot 2023-02-23 163502 - Copy.png" class="theme-img">
+        <div class="description">
+            <h3>BB Battles Leaderboard</h3>
+            <p>Last Updated: 10/3/2024</p>
+            <input id="search" class="search" placeholder="Search" oninput="search()">
+        </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>
+                            Player
+                        </td>
+                        <td>
+                            Score
+                        </td>
+                        <td>
+                            W/L
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="winner">1</td>
+                        <td><img src="images/download (81).png" width="50" height="50"><p><a href="amuro.html">Amuro</a></p></td>
+                        <td>53</td>
+                        <td>8-2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td id="runner-up">2</td>
+						<td><img src="images/download (73).png" width="50" height="50"><p><a href="cadence.html">Cadence</a></p></td>
+                        <td>26</td>
+                        <td>2-2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td id="second-runner-up">3</td>
+                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="hudsonc.html">Hudson C</a></p></td>
+                        <td>21</td>
+                        <td>4-2</td>
+                    </tr>
+                    
+					<tr>
+                        <td>4</td>
+                        <td><img src="images/uk.png" width="318" height="159"><p><a href="conor.html">Conor</a></p></td>
+                        <td>17</td>
+                        <td>3-2</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>5</td>
+                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="hugo.html">Hugo</a></p></td>
+                        <td>10</td>
+                        <td>2-2</td>
+                    </tr>
+					
+					<tr>
+                        <td>6</td>
+                        <td><img src="images/download (74).png" width="209" height="148"><p><a href="ben.html">Ben</a></p></td>
+                        <td>10</td>
+                        <td>3-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>7</td>
+                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="mackenzie.html">Mackenzie</a></p></td>
+                        <td>8</td>
+                        <td>2-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>8</td>
+                        <td><img src="images/download (74).png" width="209" height="148"><p><a href="tal.html">Tal</a></p></td>
+                        <td>8</td>
+                        <td>2-2</td>
+                    </tr>
+					
+					<tr>
+                        <td>9</td>
+                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="gideon.html">Gideon</a></p></td>
+                        <td>8</td>
+                        <td>2-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>10</td>
+                        <td><img src="images/download (80).png" width="240" height="170"><p><a href="hudsons.html">Hudson S</a></p></td>
+                        <td>8</td>
+                        <td>1-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>11</td>
+                        <td><img src="images/download (75).png" width="251" height="178"><p><a href="cooper.html">Cooper</a></p></td>
+                        <td>7</td>
+                        <td>1-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>12</td>
+                        <td><img src="images/download (76).png" width="270" height="191"><p><a href="zeus.html">Zeus</a></p></td>
+                        <td>6</td>
+                        <td>1-3</td>
+                    </tr>
+					
+					<tr>
+                        <td>13</td>
+                        <td><img src="images/download (77).png" width="268" height="189"><p><a href="ethan.html">Ethan</a></p></td>
+                        <td>6</td>
+                        <td>1-2</td>
+                    </tr>
+					
+					<tr>
+                        <td>14</td>
+                        <td><img src="images/download (78).png" width="255" height="181"><p><a href="ted.html">Ted</a></p></td>
+                        <td>4</td>
+                        <td>1-0</td>
+                    </tr>
+					
+					<tr>
+                        <td>15</td>
+                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="lia.html">Lia</a></p></td>
+                        <td>4</td>
+                        <td>1-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>16</td>
+                        <td><img src="images/download - 2024-03-10T134746.154.jpeg" width="318" height="225"><p><a href="jacob.html">Jacob</a></p></td>
+                        <td>4</td>
+                        <td>1-0</td>
+                    </tr>
+					
+					<tr>
+                        <td>17</td>
+                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="coco.html">Coco</a></p></td>
+                        <td>4</td>
+                        <td>1-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>18</td>
+                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="shani.html">Shani</a></p></td>
+                        <td>4</td>
+                        <td>1-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>19</td>
+                        <td><img src="images/download (79).png" width="249" height="176"><p><a href="george.html">George</a></p></td>
+                        <td>4</td>
+                        <td>1-0</td>
+                    </tr>
+					
+					<tr>
+                        <td>20</td>
+                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="zac.html">Zac</a></p></td>
+                        <td>2</td>
+                        <td>0-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>21</td>
+                        <td><img src="images/download (81).png" width="275" height="183"><p><a href="yuta.html">Yuta</a></p></td>
+                        <td>2</td>
+                        <td>0-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>Unrated</td>
+                        <td><img src="images/download (72).png" width="319" height="212"><p><a href="mason.html">Mason</a></p></td>
+                        <td>0</td>
+                        <td>0-2</td>
+                    </tr>
+					
+					<tr>
+                        <td>Unrated</td>
+                        <td><img src="images/download (72).png" width="319" height="212"><p><a href="pema.html">Pema</a></p></td>
+                        <td>0</td>
+                        <td>0-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>Unrated</td>
+                        <td><img src="images/germany.png" width="290" height="174"><p><a href="york.html">York</a></p></td>
+                        <td>0</td>
+                        <td>0-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>Unrated</td>
+                        <td><img src="images/usa.png" width="200" height="104"><p><a href="sam.html">Sam</a></p></td>
+                        <td>0</td>
+                        <td>0-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>Unrated</td>
+                        <td><img src="images/download (72).png" width="319" height="212"><p><a href="shelby.html">Shelby</a></p></td>
+                        <td>0</td>
+                        <td>0-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>Unrated</td>
+                        <td><img src="images/download (78).png" width="256" height="160"><p><a href="jaguar.html">Jaguar</a></p></td>
+                        <td>0</td>
+                        <td>0-1</td>
+                    </tr>
+					
+					<tr>
+                        <td>Registered</td>
+                        <td><img src="images/download (78).png" width="256" height="160"><p><a href="jaguar.html">Rae</a></p></td>
+                        <td>0</td>
+                        <td>0-0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    function search(){
+        var text = document.getElementById('search').value;
+        const tr = document.getElementsByTagName('tr');
+        for (let i=1;i<tr.length;i++){
+            if(!tr[i].children[1].children[1].innerHTML.toLowerCase().includes(
+                text.toLowerCase()
+            )){
+                tr[i].style.display = 'none';
+            }
+            else{
+                tr[i].style.display = '';
+            }
+        }
+    }
+</script>
+</html>
