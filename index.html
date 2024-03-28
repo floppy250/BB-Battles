@@ -7,7 +7,35 @@
     <meta name="viewport" content="width=	, initial-scale=1.0">
     <title>Leaderboard</title>
     <link rel="stylesheet" href="style.css">
-    
+    <style>
+        /* Styles for the pop-up */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            z-index: 9999;
+        }
+
+        .popup-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #fff;
+        }
+    </style>
     <style>
         ul {
             list-style-type: none;
@@ -47,6 +75,37 @@
 	<li><a href="calculator.html"><b>Rating Calculator</b></a></li>
 	<li><a href="log.html"><b>Update Log</b></a></li>
     </ul>
+
+	 <div class="popup-container" id="popupContainer">
+        <div class="popup-content">
+            <h2>Temporary Update Log</h2>
+            <p>Version Pre 1.3: (29/03/24)</p>
+            <ul>
+                <li>Updated Rankings</li>
+                <li>Shifted the point system from a range of 0-100 to 1000-2500</li>
+                <li>Automated rankings</li>
+                <li>Updated BB Roblox Qualifiers Bracket</li>
+                <li>Added BB Rating Calculator</li>
+                <li>Added Update Log</li>
+            </ul>
+            <span class="close-btn" onclick="closePopup()">X</span>
+        </div>
+    </div>
+
+	<script>
+        // Check if the pop-up should be displayed
+        window.onload = function() {
+            if (!localStorage.getItem('popupClosed')) {
+                document.getElementById('popupContainer').style.display = 'block';
+            }
+        };
+
+        // Function to close the pop-up and store state in localStorage
+        function closePopup() {
+            document.getElementById('popupContainer').style.display = 'none';
+            localStorage.setItem('popupClosed', true);
+        }
+    </script>
     
     <div class="leaderboard">
         <img src="images/Screenshot 2023-02-23 163502 - Copy.png" class="theme-img">
