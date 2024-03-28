@@ -1,297 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="icon" type="image/x-icon" href="images/Screenshot 2023-02-23 163502 - Copy.png">
+    <link rel="icon" type="image/x-icon" href="images/Screenshot 2023-02-23 163502 - Copy.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=	, initial-scale=1.0">
     <title>Leaderboard</title>
     <link rel="stylesheet" href="style.css">
-	
-	<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+    
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
 
-li {
-  float: left;
-}
+        li {
+            float: left;
+        }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-li a:hover:not(.active) {
-  background-color: #111;
-}
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
 
-.active {
-  background-color: #04AA6D;
-}
-</style>	
+        .active {
+            background-color: #04AA6D;
+        }
+    </style>    
 </head>
 <body>
-	
-<ul>
-  <li><a href="tournaments.html" style="background-color:#525252"><b>Tournaments</b></a></li>
-	<li><a href="future.html"><b>Future</b></a></li>
-	<li><a href="index.html"><b>Rankings</b></a></li>
-</ul>
-	
+    
+    <ul>
+        <li><a href="tournaments.html" style="background-color:#525252"><b>Tournaments</b></a></li>
+        <li><a href="future.html"><b>Future</b></a></li>
+        <li><a href="index.html"><b>Rankings</b></a></li>
+    </ul>
+    
     <div class="leaderboard">
         <img src="images/Screenshot 2023-02-23 163502 - Copy.png" class="theme-img">
         <div class="description">
             <h3>BB Battles Leaderboard</h3>
             <p>Last Updated: 27/3/2024</p>
-	<p><b>PLEASE NOTE THAT PROFILES HAVEN'T BEEN UPDATED YET</b></p>
-		<p>Profiles will be updated on 1/04/24</p>
+            <p><b>PLEASE NOTE THAT PROFILES HAVEN'T BEEN UPDATED YET</b></p>
+            <p>Profiles will be updated on 1/04/24</p>
             <input id="search" class="search" placeholder="Search" oninput="search()">
         </div>
-            <table>
-                <thead>
-                    <tr>
-                        <td></td>
-                        <td>
-                            Player
-                        </td>
-                        <td>
-                            Score
-                        </td>
-                        <td>
-                            W/L
-                        </td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="winner">1</td>
-                        <td><img src="images/download (81).png" width="50" height="50"><p><a href="amuro.html">Amuro</a></p></td>
-                        <td>64</td>
-                        <td>9-2</td>
-                    </tr>
-                    
-                    <tr>
-                        <td id="runner-up">2</td>
-			<td><img src="images/download (73).png" width="50" height="50"><p><a href="cadence.html">Cadence</a></p></td>
-                        <td>39</td>
-                        <td>3-3</td>
-                    </tr>
-                    
-                    <tr>
-                        <td id="second-runner-up">3</td>
-                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="hudsonc.html">Hudson C</a></p></td>
-                        <td>31</td>
-                        <td>5-2</td>
-                    </tr>
-
-			<tr>
-                        <td>4</td>
-                        <td><img src="images/download (78).png" width="256" height="160"><p><a href="jaguar.html">Jaguar</a></p></td>
-                        <td>22</td>
-                        <td>1-2</td>
-                    </tr>
-                    
-					<tr>
-                        <td>5</td>
-                        <td><img src="images/uk.png" width="318" height="159"><p><a href="conor.html">Conor</a></p></td>
-                        <td>17</td>
-                        <td>3-3</td>
-                    </tr>
-
-			<tr>
-                        <td>6</td>
-                        <td><img src="images/download (79).png" width="249" height="176"><p><a href="george.html">George</a></p></td>
-                        <td>16</td>
-                        <td>2-1</td>
-                    </tr>
-
-					<tr>
-                        <td>7</td>
-                        <td><img src="images/download (80).png" width="240" height="170"><p><a href="hudsons.html">Hudson S</a></p></td>
-                        <td>15</td>
-                        <td>1-2</td>
-                    </tr>
-			
-					<tr>
-                        <td>8</td>
-                        <td><img src="images/germany.png" width="290" height="174"><p><a href="york.html">York</a></p></td>
-                        <td>14</td>
-                        <td>1-1</td>
-                    </tr>
-
-					<tr>
-                        <td>9</td>
-                        <td><img src="images/download (81).png" width="275" height="183"><p><a href="yuta.html">Yuta</a></p></td>
-                        <td>12</td>
-                        <td>1-2</td>
-                    </tr>
-			
-                    <tr>
-                        <td>10</td>
-                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="hugo.html">Hugo</a></p></td>
-                        <td>10</td>
-                        <td>2-2</td>
-                    </tr>
-					
-					<tr>
-                        <td>11</td>
-                        <td><img src="images/download (74).png" width="209" height="148"><p><a href="ben.html">Ben</a></p></td>
-                        <td>10</td>
-                        <td>3-1</td>
-                    </tr>
-
-			<tr>
-                        <td>12</td>
-                        <td><img src="images/usa.png" width="200" height="104"><p><a href="#">Sam</a></p></td>
-                        <td>10</td>
-                        <td>1-1</td>
-                    </tr>
-					
-					<tr>
-                        <td>13</td>
-                        <td><img src="images/download (74).png" width="209" height="148"><p><a href="tal.html">Tal</a></p></td>
-                        <td>9</td>
-                        <td>2-2</td>
-                    </tr>
-					
-					<tr>
-                        <td>14</td>
-                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="mackenzie.html">Mackenzie</a></p></td>
-                        <td>8</td>
-                        <td>2-1</td>
-                    </tr>
-					
-
-					<tr>
-                        <td>15</td>
-                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="gideon.html">Gideon</a></p></td>
-                        <td>8</td>
-                        <td>2-1</td>
-                    </tr>
-			
-					<tr>
-                        <td>16</td>
-                        <td><img src="images/download (75).png" width="251" height="178"><p><a href="cooper.html">Cooper</a></p></td>
-                        <td>7</td>
-                        <td>1-1</td>
-                    </tr>
-			
-					<tr>
-                        <td>17</td>
-                        <td><img src="images/download (76).png" width="270" height="191"><p><a href="zeus.html">Zeus</a></p></td>
-                        <td>6</td>
-                        <td>1-3</td>
-                    </tr>
-					
-					<tr>
-                        <td>18</td>
-                        <td><img src="images/download (77).png" width="268" height="189"><p><a href="ethan.html">Ethan</a></p></td>
-                        <td>6</td>
-                        <td>1-2</td>
-                    </tr>
-					
-					<tr>
-                        <td>19</td>
-                        <td><img src="images/download (78).png" width="255" height="181"><p><a href="ted.html">Ted</a></p></td>
-                        <td>4</td>
-                        <td>1-0</td>
-                    </tr>
-					
-					<tr>
-                        <td>20</td>
-                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="lia.html">Lia</a></p></td>
-                        <td>4</td>
-                        <td>1-1</td>
-                    </tr>
-					
-					<tr>
-                        <td>21</td>
-                        <td><img src="images/download - 2024-03-10T134746.154.jpeg" width="318" height="225"><p><a href="jacob.html">Jacob</a></p></td>
-                        <td>4</td>
-                        <td>1-0</td>
-                    </tr>
-					
-					<tr>
-                        <td>22</td>
-                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="coco.html">Coco</a></p></td>
-                        <td>4</td>
-                        <td>1-1</td>
-                    </tr>
-					
-					<tr>
-                        <td>23</td>
-                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="shani.html">Shani</a></p></td>
-                        <td>4</td>
-                        <td>1-1</td>
-                    </tr>
-
-			<tr>
-                        <td>24</td>
-                        <td><img src="images/download (72).png" width="319" height="212"><p><a href="#">Mason</a></p></td>
-                        <td>4</td>
-                        <td>1-2</td>
-                    </tr>			
-					
-					<tr>
-                        <td>25</td>
-                        <td><img src="images/download (72).png" width="318" height="225"><p><a href="zac.html">Zac</a></p></td>
-                        <td>2</td>
-                        <td>0-1</td>
-                    </tr>		
-
-			<tr>
-                        <td>26</td>
-                        <td><img src="images/download (72).png" width="319" height="212"><p><a href="#">Shaun</a></p></td>
-                        <td>2</td>
-                        <td>1-0</td>
-                    </tr>
-					
-					<tr>
-                        <td>Unrated</td>
-                        <td><img src="images/download (72).png" width="319" height="212"><p><a href="#">Pema</a></p></td>
-                        <td>0</td>
-                        <td>0-1</td>
-                    </tr>
-					
-					<tr>
-                        <td>Unrated</td>
-                        <td><img src="images/download (72).png" width="319" height="212"><p><a href="#">Shelby</a></p></td>
-                        <td>0</td>
-                        <td>0-1</td>
-                    </tr>		
-					<tr>
-                        <td>Unrated</td>
-                        <td><img src="images/jamaica.png" width="317" height="198"><p><a href="#">Rae</a></p></td>
-                        <td>0</td>
-                        <td>0-1</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <table>
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>
+                        Player
+                    </td>
+                    <td>
+                        BB Points
+                    </td>
+                    <td>
+                        W/L
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="leaderboardBody">
+                <!-- Leaderboard content will be inserted here -->
+            </tbody>
+        </table>
     </div>
-</body>
-<script>
-    function search(){
-        var text = document.getElementById('search').value;
-        const tr = document.getElementsByTagName('tr');
-        for (let i=1;i<tr.length;i++){
-            if(!tr[i].children[1].children[1].innerHTML.toLowerCase().includes(
-                text.toLowerCase()
-            )){
-                tr[i].style.display = 'none';
-            }
-            else{
-                tr[i].style.display = '';
+
+    <script>
+        // Sample data for demonstration
+        var players = [
+            { name: "Amuro", score: 64, wl: "9-2", image: "images/download (81).png", link: "amuro.html" },
+            { name: "Cadence", score: 39, wl: "3-3", image: "images/download (73).png", link: "cadence.html" },
+            { name: "Hudson C", score: 31, wl: "5-2", image: "images/download (72).png", link: "hudsonc.html" },
+            { name: "Jaguar", score: 22, wl: "1-2", image: "images/download (78).png", link: "jaguar.html" },
+            { name: "Conor", score: 17, wl: "3-3", image: "images/uk.png", link: "conor.html" },
+            { name: "George", score: 16, wl: "2-1", image: "images/download (79).png", link: "george.html" },
+            { name: "Hudson S", score: 15, wl: "1-2", image: "images/uk.png", link: "hudsons.html" },
+            { name: "York", score: 14, wl: "1-1", image: "images/germany.png", link: "york.html" },
+            { name: "Yuta", score: 12, wl: "1-2", image: "images/download (81).png", link: "yuta.html" },
+            { name: "Hugo", score: 10, wl: "2-2", image: "images/download (72).png", link: "hugo.html" },
+            { name: "Ben", score: 10, wl: "3-1", image: "images/download (74).png", link: "ben.html" },
+            { name: "Sam", score: 10, wl: "1-1", image: "images/usa.png", link: "sam.html" },
+            { name: "Tal", score: 9, wl: "2-2", image: "images/download (74).png", link: "tal.html" },
+            { name: "Mackenzie", score: 8, wl: "2-1", image: "images/download (72).png", link: "mackenzie.html" },
+            { name: "Gideon", score: 8, wl: "2-1", image: "images/download (72).png", link: "gideon.html" },
+            { name: "Cooper", score: 7, wl: "1-1", image: "images/download (75).png", link: "cooper.html" },
+            { name: "Zeus", score: 6, wl: "1-3", image: "images/download (76).png", link: "zeus.html" },
+            { name: "Ethan", score: 6, wl: "1-3", image: "images/download (77).png", link: "ethan.html" },
+            { name: "Ted", score: 4, wl: "1-0", image: "images/download (78).png", link: "ted.html" },
+            { name: "Lia", score: 4, wl: "1-1", image: "images/download (72).png", link: "lia.html" },
+            { name: "Jacob", score: 4, wl: "1-0", image: "images/download - 2024-03-10T134746.154.jpeg", link: "jacob.html" },
+            { name: "Coco", score: 9, wl: "2-1", image: "images/download (72).png", link: "coco.html" },
+            { name: "Shani", score: 4, wl: "1-1", image: "images/download (72).png", link: "shani.html" },
+            { name: "Mason", score: 4, wl: "1-2", image: "images/download (72).png", link: "mason.html" },
+            { name: "Zac", score: 2, wl: "0-1", image: "images/download (72).png", link: "zac.html" },
+            { name: "Shaun", score: 2, wl: "1-0", image: "images/download (72).png", link: "shaun.html" },
+            { name: "Pema", score: 0, wl: "0-1", image: "images/download (72).png", link: "pema.html" },
+            { name: "Shelby", score: 0, wl: "0-1", image: "images/download (72).png", link: "shelby.html" },
+            { name: "Rae", score: 0, wl: "0-1", image: "images/jamaica.png", link: "rae.html" },
+        ];
+
+        // Function to calculate BB Points using the provided formula
+        function calculateBBPoints(score) {
+            // Formula: BB Points = (score * 15) + 1000
+            return (score * 15) + 1000;
+        }
+
+        // Function to update the leaderboard
+        function updateLeaderboard() {
+            var leaderboardBody = document.getElementById('leaderboardBody');
+            leaderboardBody.innerHTML = ''; // Clear previous content
+
+            // Sort players by BB Points
+            players.sort((a, b) => calculateBBPoints(b.score) - calculateBBPoints(a.score));
+
+            // Display all players
+            for (var i = 0; i < players.length; i++) {
+                var player = players[i];
+                var bbPoints = calculateBBPoints(player.score);
+                leaderboardBody.innerHTML += `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td><img src="${player.image}" width="50" height="50"><p><a href="${player.link}">${player.name}</a></p></td>
+                        <td>${bbPoints}</td>
+                        <td>${player.wl}</td>
+                    </tr>
+                `;
             }
         }
-    }
-</script>
+
+        // Call the function to initially populate the leaderboard
+        updateLeaderboard();
+    </script>
+</body>
 </html>
