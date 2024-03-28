@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BB Rating Calculator</title>
+     <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+	<style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #000;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: #0050B6;
+            text-decoration: none !important;
+        }
+
+        a:hover {
+            color: #00A0C6;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 55em;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+            padding: 1em;
+            padding-top: 2em;
+            background-color: #111;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #333;
+            color: #fff;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #04AA6D;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #21825c;
+        }
+
+        #resultContainer {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #eee;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+	<li><a href="tournaments.html" style="background-color:#525252"><b>Tournaments</b></a></li>
+	<li><a href="future.html"><b>Future</b></a></li>
+	<li><a href="index.html"><b>Rankings</b></a></li>
+</ul>
+    <div class="container">
+        <h2>BB Rating Calculator</h2>
+        <label for="ratingA">Rating of Player A:</label>
+        <input type="number" id="ratingA" min="0">
+        <label for="ratingB">Rating of Player B:</label>
+        <input type="number" id="ratingB" min="0">
+        <label for="result">Result:</label>
+        <select id="result">
+            <option value="win">Player A Wins</option>
+            <option value="loss">Player A Loses</option>
+            <option value="draw">Draw</option>
+        </select>
+        <button onclick="calculateElo()">Calculate</button>
+        <div id="resultContainer"></div>
+    </div>
+
+    <script>
+        function calculateElo() {
+            const ratingA = parseInt(document.getElementById('ratingA').value);
+            const ratingB = parseInt(document.getElementById('ratingB').value);
+            const result = document.getElementById('result').value;
+
+            // Constants
+            const K = 32; // K-factor
+
+            // Expected scores
+            const EA = 1 / (1 + Math.pow(10, (ratingB - ratingA) / 400));
+            const EB = 1 / (1 + Math.pow(10, (ratingA - ratingB) / 400));
+
+            // Actual scores
+            let SA, SB;
+            if (result === 'win') {
+                SA = 1;
+                SB = 0;
+            } else if (result === 'loss') {
+                SA = 0;
+                SB = 1;
+            } else {
+                SA = 0.5;
+                SB = 0.5;
+            }
+
+            // Change in ratings
+            const deltaA = K * (SA - EA);
+            const deltaB = K * (SB - EB);
+
+            // New ratings
+            const newRatingA = ratingA + deltaA;
+            const newRatingB = ratingB + deltaB;
+
+            // Display the results
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.innerHTML = `
+                <p>Player A's new rating: ${newRatingA.toFixed(2)}</p>
+                <p>Player B's new rating: ${newRatingB.toFixed(2)}</p>
+                <p>Player A ${deltaA >= 0 ? 'gains' : 'loses'} ${Math.abs(deltaA).toFixed(2)} rating</p>
+                <p>Player B ${deltaB >= 0 ? 'gains' : 'loses'} ${Math.abs(deltaB).toFixed(2)} rating</p>
+            `;
+        }
+    </script>
+</body>
+</html>
