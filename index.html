@@ -149,20 +149,19 @@
         <li><a href="index.html"><b>Rankings</b></a></li>
         <li><a href="calculator.html"><b>Rating Calculator</b></a></li>
         <li><a href="log.html"><b>Update Log</b></a></li>
+		<li><a href="log.html" style="color: goldenrod"><b>Finals</b></a></li>
     </ul>
 
     <div class="popup-container" id="popupContainer">
         <div class="popup-content">
-            <h2>Temporary Update Log</h2>
-            <p>Version Pre 1.3: (29/03/24)</p>
-            <ul>
-                <li>Updated Rankings</li>
-                <li>Shifted the point system from a range of 0-100 to 1000-2500</li>
-                <li>Automated rankings</li>
-                <li>Updated BB Roblox Qualifiers Bracket</li>
-                <li>Added BB Rating Calculator</li>
-                <li>Added Update Log</li>
-            </ul>
+            <h2>Update Log</h2>
+            <p>Version Pre 1.4: (30/03/24)</p>
+            <h2>
+				Added Draws<br>
+                <br>Fixed Roblox Qualifiers Bracket<br>
+                <br>Added News Page<br>
+                <br>Added Finals Page
+            </h2>
             <span class="close-btn" onclick="closePopup()">X</span>
         </div>
     </div>
@@ -201,7 +200,7 @@
                         BB Points
                     </td>
                     <td>
-                        W/L
+                        W/D/L
                     </td>
                 </tr>
             </thead>
@@ -214,35 +213,35 @@
     <script>
         // Sample data for demonstration
         var players = [
-            { name: "Amuro", score: 64, wl: "9-2", image: "images/download (81).png", link: "amuro.html" },
-            { name: "Cadence", score: 39, wl: "3-3", image: "images/download (73).png", link: "cadence.html" },
-            { name: "Hudson C", score: 31, wl: "5-2", image: "images/download (72).png", link: "hudsonc.html" },
-            { name: "Jaguar", score: 22, wl: "1-2", image: "images/download (78).png", link: "jaguar.html" },
-            { name: "Conor", score: 17, wl: "3-3", image: "images/uk.png", link: "conor.html" },
-            { name: "George", score: 16, wl: "2-1", image: "images/download (79).png", link: "george.html" },
-            { name: "Hudson S", score: 15, wl: "1-2", image: "images/uk.png", link: "hudsons.html" },
-            { name: "York", score: 14, wl: "1-1", image: "images/germany.png", link: "york.html" },
-            { name: "Yuta", score: 12, wl: "1-2", image: "images/download (81).png", link: "yuta.html" },
-            { name: "Hugo", score: 10, wl: "2-2", image: "images/download (72).png", link: "hugo.html" },
-            { name: "Ben", score: 10, wl: "3-1", image: "images/download (74).png", link: "ben.html" },
-            { name: "Sam", score: 10, wl: "1-1", image: "images/usa.png", link: "sam.html" },
-            { name: "Tal", score: 9, wl: "2-2", image: "images/download (74).png", link: "tal.html" },
-            { name: "Mackenzie", score: 8, wl: "2-1", image: "images/download (72).png", link: "mackenzie.html" },
-            { name: "Gideon", score: 8, wl: "2-1", image: "images/download (72).png", link: "gideon.html" },
-            { name: "Cooper", score: 7, wl: "1-1", image: "images/download (75).png", link: "cooper.html" },
-            { name: "Zeus", score: 6, wl: "1-3", image: "images/download (76).png", link: "zeus.html" },
-            { name: "Ethan", score: 6, wl: "1-3", image: "images/download (77).png", link: "ethan.html" },
-            { name: "Ted", score: 4, wl: "1-0", image: "images/download (78).png", link: "ted.html" },
-            { name: "Lia", score: 4, wl: "1-1", image: "images/download (72).png", link: "lia.html" },
-            { name: "Jacob", score: 4, wl: "1-0", image: "images/download - 2024-03-10T134746.154.jpeg", link: "jacob.html" },
-            { name: "Coco", score: 9, wl: "2-1", image: "images/download (72).png", link: "coco.html" },
-            { name: "Shani", score: 4, wl: "1-1", image: "images/download (72).png", link: "shani.html" },
-            { name: "Mason", score: 4, wl: "1-2", image: "images/download (72).png", link: "mason.html" },
-            { name: "Zac", score: 2, wl: "0-1", image: "images/download (72).png", link: "zac.html" },
-            { name: "Shaun", score: 2, wl: "1-0", image: "images/download (72).png", link: "shaun.html" },
-            { name: "Pema", score: 0, wl: "0-1", image: "images/download (72).png", link: "pema.html" },
-            { name: "Shelby", score: 0, wl: "0-1", image: "images/download (72).png", link: "shelby.html" },
-            { name: "Rae", score: 0, wl: "0-1", image: "images/jamaica.png", link: "rae.html" },
+            { name: "Amuro", score: 64, wl: "9-0-2", image: "images/download (81).png", link: "amuro.html" },
+            { name: "Cadence", score: 39, wl: "3-0-3", image: "images/download (73).png", link: "cadence.html" },
+            { name: "Hudson C", score: 31, wl: "5-0-2", image: "images/download (72).png", link: "hudsonc.html" },
+            { name: "Jaguar", score: 22, wl: "1-0-2", image: "images/download (78).png", link: "jaguar.html" },
+            { name: "Conor", score: 17, wl: "3-0-3", image: "images/uk.png", link: "conor.html" },
+            { name: "George", score: 16, wl: "2-0-1", image: "images/download (79).png", link: "george.html" },
+            { name: "Hudson S", score: 15, wl: "1-0-2", image: "images/uk.png", link: "hudsons.html" },
+            { name: "York", score: 14, wl: "1-0-1", image: "images/germany.png", link: "york.html" },
+            { name: "Yuta", score: 12, wl: "1-0-2", image: "images/download (81).png", link: "yuta.html" },
+            { name: "Hugo", score: 10, wl: "2-0-2", image: "images/download (72).png", link: "hugo.html" },
+            { name: "Ben", score: 10, wl: "3-0-1", image: "images/download (74).png", link: "ben.html" },
+            { name: "Sam", score: 10, wl: "1-0-1", image: "images/usa.png", link: "sam.html" },
+            { name: "Tal", score: 9, wl: "2-0-2", image: "images/download (74).png", link: "tal.html" },
+            { name: "Mackenzie", score: 8, wl: "2-0-1", image: "images/download (72).png", link: "mackenzie.html" },
+            { name: "Gideon", score: 8, wl: "2-0-1", image: "images/download (72).png", link: "gideon.html" },
+            { name: "Cooper", score: 7, wl: "1-0-1", image: "images/download (75).png", link: "cooper.html" },
+            { name: "Zeus", score: 6, wl: "1-0-3", image: "images/download (76).png", link: "zeus.html" },
+            { name: "Ethan", score: 6, wl: "1-0-3", image: "images/download (77).png", link: "ethan.html" },
+            { name: "Ted", score: 4, wl: "1-0-0", image: "images/download (78).png", link: "ted.html" },
+            { name: "Lia", score: 4, wl: "1-0-1", image: "images/download (72).png", link: "lia.html" },
+            { name: "Jacob", score: 4, wl: "1-0-0", image: "images/download - 2024-03-10T134746.154.jpeg", link: "jacob.html" },
+            { name: "Coco", score: 9, wl: "2-0-1", image: "images/download (72).png", link: "coco.html" },
+            { name: "Shani", score: 4, wl: "1-0-1", image: "images/download (72).png", link: "shani.html" },
+            { name: "Mason", score: 4, wl: "1-0-2", image: "images/download (72).png", link: "mason.html" },
+            { name: "Zac", score: 2, wl: "0-0-1", image: "images/download (72).png", link: "zac.html" },
+            { name: "Shaun", score: 2, wl: "1-0-0", image: "images/download (72).png", link: "shaun.html" },
+            { name: "Pema", score: 0, wl: "0-0-1", image: "images/download (72).png", link: "pema.html" },
+            { name: "Shelby", score: 0, wl: "0-0-1", image: "images/download (72).png", link: "shelby.html" },
+            { name: "Rae", score: 0, wl: "0-0-1", image: "images/jamaica.png", link: "rae.html" },
         ];
 
         // Function to calculate BB Points using the provided formula
