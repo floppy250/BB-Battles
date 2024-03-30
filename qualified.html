@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="icon" type="image/x-icon" href="images/Screenshot 2023-02-23 163502 - Copy.png">
+	<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+		
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .item {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    .item img {
+        max-width: 100%;
+        height: auto;
+    }
+    @media (max-width: 768px) {
+        .item {
+            width: 100%;
+        }
+    }
+</style>
+<meta charset="utf-8">
+<title>finals</title>
+</head>
+
+<body>
+	<ul>
+  <li><a href="tournaments.html" style="background-color:#525252">Tournaments</a></li>
+  <li><a href="future.html">Future</a></li>
+  <li style="float:right"><a class="active" href="index.html">Rankings</a></li>
+</ul>
+	<div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 20px; max-width: 1200px; margin: 0 auto;">
+		<div class="item" style="width: calc(50% - 20px); margin-bottom: 40px; background-color: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+        <a href="#"><img src="people/amuro.png" style="width: 50%; height: auto; border-radius: 10px 10px 10px 10px;"></a>
+        <div class="item-content" style="padding: 20px;">
+            <h2 style="margin-top: 0;"><a href="#" style="text-decoration: none; color: #333;">Amuro</a></h2>
+            <h2 style="margin: 10px 0; color: #666;">Qualified: Geoguessr Championship 1st</h2>
+            <a href="amuro.html" class="btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: #fff; text-decoration: none; border-radius: 5px; transition: background-color 0.3s ease;"><b>PROFILE</b></a>
+        </div>
+    </div>
+	
+	<div class="item" style="width: calc(50% - 20px); margin-bottom: 40px; background-color: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+        <a href="cadence.html"><img src="people/cadence.png" style="width: 50%; height: auto; border-radius: 10px 10px 10px 10px;"></a>
+        <div class="item-content" style="padding: 20px;">
+            <h2 style="margin-top: 0;"><a href="#" style="text-decoration: none; color: #333;">Cadence</a></h2>
+            <h2 style="margin: 10px 0; color: #666;">Qualified: Geoguessr Championship: 2nd</h2>
+            <a href="#" class="btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: #fff; text-decoration: none; border-radius: 5px; transition: background-color 0.3s ease;"><b>PROFILE</b></a>
+        </div>
+    </div>
+	<div class="item" style="width: calc(50% - 20px); margin-bottom: 40px; background-color: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+        <a href="conor.html"><img src="people/conor.jpg" style="width: 50%; height: auto; border-radius: 10px 10px 10px 10px;"></a>
+        <div class="item-content" style="padding: 20px;">
+            <h2 style="margin-top: 0;"><a href="#" style="text-decoration: none; color: #333;">Conor</a></h2>
+            <h2 style="margin: 10px 0; color: #666;">Qualified: Geoguessr Knockout: 1st</h2>
+            <a href="#" class="btn" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: #fff; text-decoration: none; border-radius: 5px; transition: background-color 0.3s ease;"><b>PROFILE</b></a>
+        </div>
+    </div>
+</body>
+</html>
